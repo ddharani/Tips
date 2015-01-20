@@ -40,7 +40,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="0At-WV-xOx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="0At-WV-xOx">
                                 <rect key="frame" x="198" y="102" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -76,17 +76,21 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="2CU-tV-7Kv"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="iAY-Bi-JIz" appends="YES" id="zAc-gt-glv"/>
+                            <outletCollection property="gestureRecognizers" destination="iAY-Bi-JIz" appends="YES" id="ZQl-oa-RWC"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="billField" destination="0At-WV-xOx" id="3gI-CV-OVQ"/>
-                        <outlet property="tipController" destination="kh9-bI-dsS" id="a4G-G8-BBT"/>
+                        <outlet property="tipControl" destination="I2Y-9s-vVV" id="p2H-zn-vIt"/>
                         <outlet property="tipLabel" destination="Fbk-9s-9S9" id="ZPC-Bw-WGe"/>
                         <outlet property="totalLabel" destination="cTa-zL-Iew" id="G6A-fZ-hxg"/>
                     </connections>
@@ -98,7 +102,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="35" y="334"/>
+            <point key="canvasLocation" x="140" y="219"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
